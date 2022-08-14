@@ -8,11 +8,11 @@ const refs = {
   countryList: document.querySelector('.country-list'),
   countryInfo: document.querySelector('.country-info'),
 };
-let country=""
+let country="arge"
 
 
  function fetchCountries(name) {   
-   fetch(
+ return  fetch(
      `https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages`
    )
      .then(response => {
@@ -22,7 +22,7 @@ let country=""
 
        return response.json();
      })
-     .then(marckup).catch(error);
+     ;
      
      
  }
@@ -34,8 +34,9 @@ refs.searchInput.addEventListener(
 
 
 function inputCounty(e) {
+  deliteMarckupCountreis();
   country = e.target.value.trim();
- fetchCountries(country);
+  fetchCountries(country).then(marckup).catch(error);
 }
  
   
