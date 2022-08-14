@@ -11,8 +11,7 @@ const refs = {
 let country=""
 
 
- function fetchCountries(name) {
-   
+ function fetchCountries(name) {   
    fetch(
      `https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages`
    )
@@ -35,7 +34,7 @@ refs.searchInput.addEventListener(
 
 
 function inputCounty(e) {
-  country = e.target.value;
+  country = e.target.value.trim();
  fetchCountries(country);
 }
  
@@ -54,8 +53,6 @@ function marckup(data) {
       
     }
   }
-    
-
 
 function countryList(data) {
   deliteMarckupCountreis();
