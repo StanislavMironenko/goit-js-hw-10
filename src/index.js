@@ -1,5 +1,5 @@
 import './css/styles.css';
-// import fetchCountries from './fetchCountries';
+import fetchCountries from './fetchCountries';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
 const DEBOUNCE_DELAY = 300;
@@ -11,21 +11,6 @@ const refs = {
 let country="arge"
 
 
- function fetchCountries(name) {   
- return  fetch(
-     `https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages`
-   )
-     .then(response => {
-       if (!response.ok) {
-         throw new Error(response.status);
-       }
-
-       return response.json();
-     })
-     ;
-     
-     
- }
 
 refs.searchInput.addEventListener(
   'input',
