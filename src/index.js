@@ -68,7 +68,7 @@ function countryInfo(data) {
   deliteMarckupCountreis();
   const marckupCountryInfo = data
     .map(country => {
-console.log(Object.values(country.languages));
+
       return `<div><img  
       src=${country.flags.svg}
       alt='Flag of ${country.name}'

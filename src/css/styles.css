@@ -38,9 +38,7 @@ body {
   
   margin-left: 15px;
 }
-.country-info{
 
-}
 .country-info>div{
   display: flex;
 }
@@ -56,6 +54,6 @@ body {
 margin-bottom: 15px;
 }
 .inforamtion{
-font-size: 25px;
+font-size: 20px;
 font-weight: 700;
 }
