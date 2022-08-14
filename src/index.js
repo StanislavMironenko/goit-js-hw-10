@@ -2,7 +2,7 @@ import './css/styles.css';
 // import fetchCountries from './fetchCountries';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
-const DEBOUNCE_DELAY = 3000;
+const DEBOUNCE_DELAY = 300;
 const refs = {
   searchInput: document.querySelector('#search-box'),
   countryList: document.querySelector('.country-list'),
