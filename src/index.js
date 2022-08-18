@@ -58,9 +58,9 @@ function countryInfo(data) {
   <ul >
     <li ><span class='inforamtion'>Capital:
       </span>${country.capital}</li>
-    <li class='cantry-info-item'><span class='inforamtion'>Population:
+    <li ><span class='inforamtion'>Population:
       </span>${country.population}</li>
-    <li class='cantry-info-item'><span class='inforamtion'>Languages:
+    <li ><span class='inforamtion'>Languages:
       </span>${Object.values(country.languages).join(', ')}</li>
   </ul>`;
     })
