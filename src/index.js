@@ -8,7 +8,7 @@ const refs = {
   countryList: document.querySelector('.country-list'),
   countryInfo: document.querySelector('.country-info'),
 };
-let country="arge"
+let country = "";
 
 
 
@@ -16,16 +16,11 @@ refs.searchInput.addEventListener(
   'input',
   debounce(inputCounty, DEBOUNCE_DELAY)
 );
-
-
 function inputCounty(e) {
   deliteMarckupCountreis();
   country = e.target.value.trim();
   fetchCountries(country).then(marckup).catch(error);
-}
- 
-  
-
+} 
 function marckup(data) {
   
   if (data.length >= 2 && data.length <= 10) {  
@@ -39,7 +34,6 @@ function marckup(data) {
       
     }
   }
-
 function countryList(data) {
   deliteMarckupCountreis();
   const marckupList = data
@@ -77,8 +71,6 @@ function deliteMarckupCountreis() {
   refs.countryInfo.innerHTML = '';
     refs.countryList.innerHTML='';
 }
-
-
 function error (error) {
       if (error.message === '404') {       
         return Notiflix.Notify.failure(
